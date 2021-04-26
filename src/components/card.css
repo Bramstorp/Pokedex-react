@@ -26,3 +26,14 @@
   text-transform: capitalize;
   font-weight: 500;
 }
+
+.Card__stat{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  text-align: center;
+}
+
+.Card__stat p{
+  flex: 0 0 33.333333%;
+}

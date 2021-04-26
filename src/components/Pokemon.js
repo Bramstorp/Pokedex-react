@@ -5,7 +5,7 @@ import './card.css';
 
 export const Pokemon = ({ pokemon }) => {
 
-  console.log(pokemon)
+  console.log(pokemon.stats)
   return (
     <div className="Card">
       <div className="Card__name">{pokemon.name}</div>
@@ -21,6 +21,15 @@ export const Pokemon = ({ pokemon }) => {
             >
               {type.type.name}
             </div>
+          );
+        })}
+      </div>
+      <div className="Card__stat">
+        {pokemon.stats.map((states) => {
+          return (
+            <p>
+              {states.stat.name} - {states.base_stat}
+            </p>
           );
         })}
       </div>
