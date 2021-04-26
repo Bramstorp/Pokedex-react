@@ -5,6 +5,7 @@ import './card.css';
 
 export const Pokemon = ({ pokemon }) => {
   console.log(pokemon)
+  
   return (
     <div className="Card">
       <div className="Card__name">{pokemon.name}</div>
