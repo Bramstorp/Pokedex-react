@@ -4,11 +4,14 @@ import './card.css';
 
 
 export const Pokemon = ({ pokemon }) => {
-
   console.log(pokemon)
   return (
     <div className="Card">
       <div className="Card__name">{pokemon.name}</div>
+      <div className="Card__meta">
+        <span>{pokemon.stats[0].stat.name} - {pokemon.stats[0].base_stat}</span>
+        <span>{pokemon.stats[1].stat.name} - {pokemon.stats[0].base_stat}</span>
+      </div>
       <div className="Card__img">
         <img src={pokemon.sprites.front_default} alt="" />
       </div>
@@ -20,17 +23,6 @@ export const Pokemon = ({ pokemon }) => {
               style={{ backgroundColor: pokemonTypeColors[type.type.name] }}
             >
               {type.type.name}
-            </div>
-          );
-        })}
-      </div>
-      <div className="Card__stat">
-        {pokemon.stats.map((states) => {
-          return (
-            <div className="Card__stat__card">
-              <p>
-                {states.stat.name} - {states.base_stat}
-              </p>
             </div>
           );
         })}
