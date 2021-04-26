@@ -20,6 +20,7 @@
   background-color: #7bb7b7;
   font-weight: bold;
   border-radius: 5px;
+  text-transform: capitalize;
 }
 
 .Card__name {
@@ -40,6 +41,7 @@
   justify-content: space-between;
   margin-top: 10px;
   padding: 0 10px;
+  text-transform: capitalize;
 }
 
 .Card__meta span {
