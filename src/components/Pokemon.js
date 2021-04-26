@@ -27,9 +27,11 @@ export const Pokemon = ({ pokemon }) => {
       <div className="Card__stat">
         {pokemon.stats.map((states) => {
           return (
-            <p>
-              {states.stat.name} - {states.base_stat}
-            </p>
+            <div className="Card__stat__card">
+              <p>
+                {states.stat.name} - {states.base_stat}
+              </p>
+            </div>
           );
         })}
       </div>
