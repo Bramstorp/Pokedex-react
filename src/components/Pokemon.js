@@ -2,7 +2,6 @@ import React from "react";
 import { pokemonTypeColors } from "../theme/pokemon-type"
 import './card.css';
 
-
 export const Pokemon = ({ pokemon }) => {
   console.log(pokemon)
   
@@ -14,7 +13,7 @@ export const Pokemon = ({ pokemon }) => {
         <span>{pokemon.stats[1].stat.name} - {pokemon.stats[1].base_stat}</span>
       </div>
       <div className="Card__img">
-        <img src={pokemon.sprites.front_default} alt="" />
+        <img className="card__img__sprites" src={pokemon.sprites.other.dream_world.front_default} alt="" />
       </div>
       <div className="Card__types">
         {pokemon.types.map((type) => {
@@ -27,6 +26,9 @@ export const Pokemon = ({ pokemon }) => {
             </div>
           );
         })}
+      </div>
+      <div className="Card__ability">
+        <p>Abilities: {pokemon.abilities[0].ability.name}</p>
       </div>
     </div>
   );
