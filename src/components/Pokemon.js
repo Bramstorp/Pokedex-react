@@ -11,7 +11,7 @@ export const Pokemon = ({ pokemon }) => {
       <div className="Card__name">{pokemon.name}</div>
       <div className="Card__meta">
         <span>{pokemon.stats[0].stat.name} - {pokemon.stats[0].base_stat}</span>
-        <span>{pokemon.stats[1].stat.name} - {pokemon.stats[0].base_stat}</span>
+        <span>{pokemon.stats[1].stat.name} - {pokemon.stats[1].base_stat}</span>
       </div>
       <div className="Card__img">
         <img src={pokemon.sprites.front_default} alt="" />
